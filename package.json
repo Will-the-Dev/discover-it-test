@@ -29,6 +29,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "jest --watch",
+    "postbuild": "node server.js",
+    "startprod": "npm run build && npm run postbuild",
     "eject": "react-app-rewired eject",
     "test:coverage": "react-scripts test --coverage",
     "format": "prettier --write src/**/*.ts{,x}",
