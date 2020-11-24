@@ -131,7 +131,7 @@ export const CafesList: FC = () => {
                         </FlexRowContainer>
                         <br />
                         <FormControl component="fieldset">
-                            <FormLabel component="legend">Search By:</FormLabel>
+                            <FormLabel component="legend">SEARCH BY:</FormLabel>
                             <RadioGroup
                                 value={searchBy}
                                 name="searchBy"
@@ -159,11 +159,19 @@ export const CafesList: FC = () => {
                             {searchedCafes.length > 1 ? 's' : ''} found
                         </Typography>
                         <br />
-                        <Button onClick={clearSearch}>Clear Search</Button>
+                        <Button variant="contained" onClick={clearSearch}>
+                            Clear Search
+                        </Button>
                     </div>
                 )}
                 {isSearching && searchedCafes.length === 0 && (
-                    <Typography>No results found</Typography>
+                    <div>
+                        <Typography>No results found</Typography>
+                        <br />
+                        <Button variant="contained" onClick={clearSearch}>
+                            Clear Search
+                        </Button>
+                    </div>
                 )}
                 {(isSearching ? searchedCafes : cafes).map((item) => (
                     <CafeTeaser key={item.system.id} cafe={item} />

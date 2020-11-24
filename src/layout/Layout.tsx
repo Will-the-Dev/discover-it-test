@@ -2,6 +2,8 @@ import { Typography, Link } from '@material-ui/core';
 import React, { FC, ReactElement } from 'react';
 import styled from 'styled-components';
 
+import { GreenText, WhiteText } from '@components';
+
 const Wrapper = styled.div`
     height: 100%;
     width: 100%;
@@ -18,14 +20,6 @@ const Footer = styled.footer`
     justify-content: center;
     color: #ffffff;
     background: #000000;
-`;
-
-const GreenText = styled.span`
-    color: #01796f;
-`;
-
-const WhiteText = styled.span`
-    color: #ffffff;
 `;
 
 const HeaderContainer = styled.div`
