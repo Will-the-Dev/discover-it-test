@@ -1,7 +1,8 @@
+import React, { FC } from 'react';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
+
 import { CafeElements } from '@types';
-import React, { FC } from 'react';
 
 interface Props {
     value: keyof CafeElements;

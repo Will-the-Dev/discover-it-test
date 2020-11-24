@@ -1,20 +1,19 @@
 import React, { FC, SyntheticEvent, useState } from 'react';
-import {
-    RadioGroup,
-    TextField,
-    Typography,
-    FormControl,
-    FormLabel,
-    Button,
-} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
 import styled from 'styled-components';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
+import { Cafe, CafeElements } from '@types';
+import { searchCafes } from '@services';
+
+import { CafeTeaser } from '../cafe';
 import { HERO_IMAGE } from './image';
 import { SearchByRadio } from './SearchByRadio';
 import { useAppContext } from '../../AppContext';
-import { CafeTeaser } from '../cafe';
-import { searchCafes } from '@services';
-import { Cafe, CafeElements } from '@types';
 
 const Flex = styled.div`
     display: flex;
@@ -36,9 +35,9 @@ const HeroParallax = styled(Flex)`
 
 const Overlay = styled.div`
     background: #01796f;
+    height: 100%;
     opacity: 0.4;
     position: absolute;
-    height: 100%;
     width: 100%;
 
     &:hover {
@@ -56,19 +55,21 @@ const FlexRowContainer = styled(Flex)`
 `;
 
 const FindContainer = styled.div`
-    max-width: 570px;
     margin: 30px;
+    max-width: 570px;
     z-index: 1;
 `;
 
 const CardsContainer = styled(Flex)`
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
     margin: 60px auto;
+    max-width: 1200px;
+    width: calc(100% - 28px);
+    padding: 0px 14px;
 
     & > * {
         margin: 16px;

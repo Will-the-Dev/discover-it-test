@@ -1,14 +1,14 @@
-import { Cafe } from '@types';
-import Avatar from '@material-ui/core/Avatar';
-import CardHeader from '@material-ui/core/CardHeader';
 import React, { FC } from 'react';
+import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import CardHeader from '@material-ui/core/CardHeader';
 import styled from 'styled-components';
+
+import { Cafe } from '@types';
 
 const Article = styled.article`
     min-height: 240px;
     min-width: 220px;
-    max-width: 345px;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
@@ -22,10 +22,14 @@ const Article = styled.article`
     }
 
     @media screen and (min-width: 40em) {
-        max-width: calc(50% - 16px);
+        max-width: calc(45% - 16px);
     }
 
     @media screen and (min-width: 60em) {
+        max-width: calc(35% - 16px);
+    }
+
+    @media screen and (min-width: 80em) {
         max-width: calc(30% - 16px);
     }
 `;
@@ -76,10 +80,12 @@ export const CafeTeaser: FC<Props> = ({ cafe: { elements, system } }) => {
                     <p>
                         {street.value}, {city.value}
                     </p>
-                    <p>
-                        {zip_code.value && `${zip_code.value}, `}{' '}
-                        {state.value && `${state.value}, `} {country.value}
-                    </p>
+                    {zip_code.value || state.value || country.value || (
+                        <p>
+                            {zip_code.value && `${zip_code.value}, `}{' '}
+                            {state.value && `${state.value}, `} {country.value}
+                        </p>
+                    )}
                     <p>
                         <strong>Contact</strong>
                     </p>
