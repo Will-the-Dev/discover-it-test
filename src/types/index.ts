@@ -28,7 +28,7 @@ export interface Photo {
     value: PhotoValue[];
 }
 
-export interface Elements {
+export interface CafeElements {
     street: Element;
     city: Element;
     country: Element;
@@ -39,7 +39,17 @@ export interface Elements {
     photo: Photo;
 }
 
-export interface CafeItem {
+export interface Cafe {
     system: System;
-    elements: Elements;
+    elements: CafeElements;
+}
+
+export interface ContentResponse {
+    items: Cafe[];
+    pagination: {
+        skip: number;
+        limit: number;
+        count: number;
+        next_page: string;
+    };
 }

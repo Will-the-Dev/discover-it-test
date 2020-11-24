@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@types": ["src/types/index"],
+      "@utils": ["src/utils/index"],
+      "@components": ["src/components/index"],
+      "@services": ["src/services/index"],
+      "@hooks": ["src/hooks/index"]
+    }
+  }
+}

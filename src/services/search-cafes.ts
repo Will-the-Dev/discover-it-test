@@ -1,14 +1,14 @@
-import { CafeItem, Elements } from '@types';
+import { Cafe, CafeElements } from '@types';
 import { transport } from '@utils';
 
 export const searchCafes = async ({
     searchBy,
     searchValue,
 }: {
-    searchBy: keyof Elements;
+    searchBy: keyof CafeElements;
     searchValue: string;
-}): Promise<CafeItem[]> => {
-    const { data } = await transport.get<{ items: CafeItem[] }>(
+}): Promise<Cafe[]> => {
+    const { data } = await transport.get<{ items: Cafe[] }>(
         `system.type=cafe&elements.${searchBy}=${searchValue}`
     );
 

@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading indicator tests should render the component to match the snapshot when hasError and isLoading are false 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Loading indicator tests should render the component to match the snapshot when hasError is true 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+    class="c0"
+  >
+    <h1>
+      Oops! Something went wrong try again!
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loading indicator tests should render the component to match the snapshot when isLoading is true 1`] = `
+<DocumentFragment>
+  .c3 {
+  width: 7px;
+  height: 100%;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.c4 {
+  width: 7px;
+  height: 100%;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.c5 {
+  width: 7px;
+  height: 100%;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.c6 {
+  width: 7px;
+  height: 100%;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.c7 {
+  width: 7px;
+  height: 100%;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.c1 {
+  margin: 40px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.c1 > .c2 {
+  background-color: #333;
+  -webkit-animation-name: dMPjAB;
+  animation-name: dMPjAB;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+      color="#333"
+      size="40"
+      speed="1.2"
+    >
+      <div
+        class="c2 c3"
+      />
+      <div
+        class="c2 c4"
+      />
+      <div
+        class="c2 c5"
+      />
+      <div
+        class="c2 c6"
+      />
+      <div
+        class="c2 c7"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

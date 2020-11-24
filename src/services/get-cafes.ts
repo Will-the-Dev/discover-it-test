@@ -1,16 +1,10 @@
-import { CafeItem } from '@types';
+import { ContentResponse } from '@types';
 import { transport } from '@utils';
 
-const DEFAULTS = { limit: 0, skip: 0 };
-
-export const getCafes = async ({ limit, skip } = DEFAULTS): Promise<
-    CafeItem[]
-> => {
-    const { data } = await transport.get<{ items: CafeItem[] }>(
-        `system.type=cafe&limit=${limit}&skip=${skip}`
-    );
+export const getCafes = async (): Promise<ContentResponse> => {
+    const { data } = await transport.get<ContentResponse>('system.type=cafe');
 
     if (!data.items) throw new Error('Something went wrong');
 
-    return data.items;
+    return data;
 };
